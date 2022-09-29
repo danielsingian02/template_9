@@ -1,0 +1,266 @@
+/* Theme Name: Template 9
+Text Domain: Template 9
+Version: 1.9
+Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
+Author: iPhiTech IT Digital Solutions Corporation
+Author URI: iPhiTech IT Digital Solutions Corporation
+*/
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background-color: #4086E5;
+}
+
+.header {
+    height: 106px;
+    width: 100%;
+    background-color: #094DA2;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+    display: flex;
+}
+.logo-container {
+    width: 10%;
+}
+.menu-container {
+    padding-top: 15px;
+    width: 90%;
+    text-align: right;
+    color: white;
+    text-transform: uppercase;
+    
+}
+
+.menu-container li {
+    list-style: none;
+    display: inline;
+    line-height: 0.5;
+}
+.logo-container img {
+    height: 80px;
+}
+
+footer {
+    width: 100%;
+    height: 242px;
+    background-color: #094DA2;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+.menu-container-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    
+}
+.menu-container-footer li {
+    list-style: none;
+    display: inline;
+    line-height: 0.5;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.banner {
+    width: 100%;
+    height: 590px;
+    color: white;
+    text-align: center;
+
+    padding-top: 120px;
+    text-transform: uppercase;
+}
+.banner h1 {
+    font-weight: 800;
+    font-size: 218px;
+}
+.banner h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+.banner img {
+    width: 100%;
+}
+.card-container {
+    display: flex;
+    width: 910px;
+    margin: auto;
+    margin-top: -100px;
+}
+.card {
+    width: 289px;
+    height: 312px;
+    background-color: #094DA2;
+    color: white;
+    border-radius: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: 30px 10px 10px 10px;
+    text-align: center;
+
+}
+.card img {
+    width: 50%;
+    margin: auto;
+}
+.card h6 {
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.text-heading {
+    width: 874px;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.text-heading h3 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 88%;
+}
+#small-diamond {
+    height: 20px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+.text-heading p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.map {
+    width: 100%;
+    height: 250px;
+}
+.map img {
+    width: 100%;
+}
+
+.text-heading-2 {
+    width: 860px;
+    height: 650px;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.text-heading-2 h4 {
+    font-size: 32px;
+    line-height: 88%;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 225px;
+        height: 351px;
+    }
+    .card-container {
+        display: flex;
+        width: 719px;
+    }
+    .text-heading {
+        width: 700px;
+        height: 450px;
+    }
+    .map {
+        height: 135px;
+    }
+    .text-heading-2 {
+        width: 680px;
+    }
+    .gallery img {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 245px;
+    }
+    .banner h1 {
+        font-weight: 800;
+        font-size: 160px;
+    }
+    .menu-container li {
+        list-style: none;
+        display: revert;
+        line-height: 1.5;
+    }
+    .card-container {
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+    }
+    .card {
+        width: 96%;
+        height: 351px;
+        margin-bottom: 10px;
+    }
+    .text-heading {
+        width: 90%;
+        height: 600px;
+    }
+    .text-heading p {
+        text-align: justify;
+    }
+    .text-heading h3 {
+        font-size: 36px;
+    }
+    .text-heading-2 {
+        width: 95%;
+    }
+    .text-heading-2 p {
+        text-align: justify;
+    }
+    .gallery {
+        width: 90%;
+        flex-direction: column;
+        margin: auto;
+
+    }
+    .gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer {
+        margin-top: 600px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .text-heading {
+        height: 700px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .banner h1 {
+        font-size: 120px;
+    }
+    footer {
+        height: 405px;
+    }
+    .menu-container-footer li {
+        list-style: none;
+        display: bloxk;
+        line-height: 2;
+        margin-left: -15px;
+}
