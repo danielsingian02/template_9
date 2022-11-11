@@ -441,4 +441,39 @@ footer .menu-container-footer a:hover {
 }
 footer p {
   text-align: center;
+}
+
+.site-content-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  min-height: 50vh;
+}
+.site-content-404 .entry-header {
+  background-color: #094DA2;
+}
+.site-content-404 form .text-404 {
+  border: 1px solid black;
+  padding: 0.25rem 1rem;
+}
+.site-content-404 form .submit {
+  background-color: #094DA2;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border: 0;
+}
+.site-content-404 .home-link {
+  margin-top: 0.5rem;
+}
+.site-content-404 a {
+  text-decoration: none;
+}
+.site-content-404 .fa {
+  margin-right: 0.2rem;
+}
+@media only screen and (max-width: 767px) {
+  .site-content-404 {
+    padding: 4rem 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
