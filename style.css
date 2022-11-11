@@ -24,14 +24,14 @@ img {
   height: auto;
 }
 
-header {
+section > header {
   background-color: #094DA2;
   width: 100%;
   color: white;
   border-top: 10px solid #4086E5;
   padding: 16.16px 0;
 }
-header nav {
+section > header nav {
   width: 95%;
   margin: auto;
   display: flex;
@@ -39,12 +39,12 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
-header .menu-container {
+section > header .menu-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-header .menu-container ul {
+section > header .menu-container ul {
   display: flex;
   flex-direction: row;
   color: white;
@@ -52,7 +52,7 @@ header .menu-container ul {
   -moz-column-gap: 22px;
        column-gap: 22px;
 }
-header .menu-container li {
+section > header .menu-container li {
   display: flex;
   list-style-type: none;
   font-weight: 400;
@@ -60,62 +60,62 @@ header .menu-container li {
   line-height: 21px;
   letter-spacing: 0.05em;
 }
-header .menu-container li.current_page_item {
+section > header .menu-container li.current_page_item {
   font-weight: 700;
 }
-header .menu-container a {
+section > header .menu-container a {
   font-family: "Poppins", serif;
   text-transform: uppercase;
 }
-header .menu-container a:hover {
+section > header .menu-container a:hover {
   color: currentColor;
   font-weight: 700;
 }
 @media only screen and (max-width: 767px) {
-  header .menu-container {
+  section > header .menu-container {
     display: none;
   }
 }
-header .user-portal__links > a:first-of-type {
+section > header .user-portal__links > a:first-of-type {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-header .user-portal__links > a:first-of-type::after {
+section > header .user-portal__links > a:first-of-type::after {
   content: "|";
   margin-left: 10px;
   margin-right: 10px;
 }
-header .user-portal a {
+section > header .user-portal a {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0.05em;
 }
-header .hamburger {
+section > header .hamburger {
   display: none;
   color: white;
   padding: 1rem;
   border: 2px solid white;
   border-radius: 0.5rem;
 }
-header .hamburger:hover {
+section > header .hamburger:hover {
   background-color: white;
   color: #094DA2;
   border-color: currentColor;
 }
 @media only screen and (max-width: 767px) {
-  header .hamburger {
+  section > header .hamburger {
     display: flex;
   }
 }
-header .menu-container-responsive ul {
+section > header .menu-container-responsive ul {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   row-gap: 22px;
 }
-header .menu-container-responsive li {
+section > header .menu-container-responsive li {
   display: flex;
   list-style-type: none;
   font-weight: 400;
@@ -124,14 +124,14 @@ header .menu-container-responsive li {
   letter-spacing: 0.05em;
   color: #094DA2;
 }
-header .menu-container-responsive li.current_page_item {
+section > header .menu-container-responsive li.current_page_item {
   font-weight: 700;
 }
-header .menu-container-responsive a {
+section > header .menu-container-responsive a {
   font-family: "Poppins", serif;
   text-transform: uppercase;
 }
-header .menu-container-responsive a:hover {
+section > header .menu-container-responsive a:hover {
   color: currentColor;
   font-weight: 700;
 }
@@ -452,6 +452,7 @@ footer p {
 }
 .site-content-404 .entry-header {
   background-color: #094DA2;
+  color: white;
 }
 .site-content-404 form .text-404 {
   border: 1px solid black;
@@ -476,4 +477,56 @@ footer p {
   .site-content-404 {
     padding: 4rem 2rem;
   }
+}
+
+.site-content-search {
+  color: black;
+}
+.site-content-search header {
+  background-color: initial;
+}
+.site-content-search > .search-results {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: inherit;
+  padding: 4rem;
+}
+@media only screen and (max-width: 1024px) {
+  .site-content-search > .search-results {
+    padding: 1rem;
+  }
+}
+.site-content-search article {
+  border: 2px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.site-content-search article a {
+  text-decoration: none;
+  color: black;
+}
+.site-content-search article + article {
+  margin-top: 1rem;
+}
+.site-content-search article .content {
+  margin: 1.5rem;
+  overflow: hidden;
+  min-height: 100%;
+  max-height: 15rem;
+}
+.site-content-search article .entry-header-search {
+  font-weight: 700;
+}
+.site-content-search article .entry-content-search {
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
+}
+.site-content-search article:hover {
+  border-color: #094DA2;
+  color: #094DA2;
+}
+.site-content-search article:hover a {
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */
