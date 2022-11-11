@@ -1,0 +1,486 @@
+/* Theme Name: Template 9
+Text Domain: Template 9
+Version: 1.9
+Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-patterns, block-styles, wide-blocks, accessibility-ready
+Author: iPhiTech IT Digital Solutions Corporation
+Author URI: iPhiTech IT Digital Solutions Corporation
+*/
+
+// Color Pallate
+$primary-color: #094DA2;
+$secondary-color: #4086E5;
+
+// Mixin for the font
+@mixin responsiveFontsize($font-size ) {
+    @media #{ $media_tablet } {
+        font-size: calc($font-size * .70);
+    }
+
+    @media #{ $media_mobile } {
+        font-size: calc($font-size * .50);
+    }
+
+    @media #{ $media_mobile_sm } {
+        font-size: calc($font-size * .45);
+    }
+}
+
+// Media Query Breakpoints
+$media_desktop : "only screen and (max-width: 1440px)";
+$media_tablet : "only screen and (max-width: 1024px)";
+$media_tablet_xs : "only screen and (min-width: 991px)";
+$media_mobile : "only screen and (max-width: 767px)";
+$media_mobile_sm : "only screen and (max-width: 425px)";
+$media_mobile_xs : "only screen and (max-width: 375px)";
+
+// Importing the Montserrat, Poppins font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+// Global Config
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: $primary-color;
+    width: 100%;
+    color: white;
+    border-top: 10px solid $secondary-color;
+    padding: 16.16px 0;
+
+    & nav {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        & ul {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            margin: 0;
+            column-gap: 22px;
+        }
+
+        & li {
+            display: flex;
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.05em;
+
+            &.current_page_item {
+                font-weight: 700;
+            }
+
+        }
+
+        & a {
+            font-family: 'Poppins', serif;
+            text-transform: uppercase;
+
+            &:hover {
+                color: currentColor;
+                font-weight: 700;
+            }
+        }
+
+        @media #{ $media-mobile } {
+            display: none;
+        }
+
+    }
+
+    // User Portal
+    & .user-portal__links>a:first-of-type {
+        column-gap: 10px;
+
+        &::after {
+            content: '|';
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+    }
+
+    & .user-portal a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+    }
+
+    // Hamburger Button
+    & .hamburger {
+        display: none;
+        color: white;
+        padding: 1rem;
+        border: 2px solid white;
+        border-radius: 0.5rem;
+
+        &:hover {
+            background-color: white;
+            color: $primary-color;
+            border-color: currentColor;
+        }
+
+        @media #{ $media-mobile } {
+            display: flex;
+        }
+    }
+
+    & .menu-container-responsive {
+        & ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            row-gap: 22px;
+        }
+
+        & li {
+            display: flex;
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.05em;
+            color: $primary-color;
+
+            &.current_page_item {
+                font-weight: 700;
+            }
+
+        }
+
+        & a {
+            font-family: 'Poppins', serif;
+            text-transform: uppercase;
+
+            &:hover {
+                color: currentColor;
+                font-weight: 700;
+            }
+        }
+    }
+
+}
+
+// End of the Header
+
+.banner {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15em 0;
+
+    & .banner-text {
+        width: fit-content;
+    }
+
+    & h2 {
+        font-weight: 800;
+        font-size: 218px;
+        line-height: 88%;
+        letter-spacing: -0.05em;
+
+        @include responsiveFontsize(218px);
+    }
+
+    & h3 {
+        font-weight: 800;
+        font-size: 39px;
+        line-height: 88%;
+        letter-spacing: -0.05em;
+
+        @include responsiveFontsize(39px);
+    }
+
+    @media #{ $media_mobile } {
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+.card-container,
+.text-heading,
+.text-heading-2 {
+    width: 60%;
+    margin: auto;
+    display: flex;
+
+    @media #{ $media_tablet } {
+        width: 80%;
+    }
+
+    @media #{ $media_mobile } {
+        width: 90%;
+    }
+}
+
+.card-container {
+    flex-direction: row;
+    margin-top: -4%;
+    column-gap: 15px;
+
+    & .card {
+        background-color: $primary-color;
+        color: white;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 28px;
+    }
+
+    & .card-icon {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 0;
+
+        & img {
+            width: 30%;
+            height: auto;
+            margin: auto;
+        }
+    }
+
+    & h6 {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 88%;
+        letter-spacing: -0.005em;
+        text-transform: uppercase;
+    }
+
+    @media #{ $media_tablet } {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    @media #{ $media_mobile } {
+        margin-top: 4%;
+    }
+}
+
+.text-heading-container {
+    background-image: url(assets/images/diamond-background.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 0;
+
+    &>* {
+        flex-direction: column;
+    }
+
+    & h3,
+    h4 {
+        text-align: center;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 88%;
+        letter-spacing: -0.025em;
+        color: #000000;
+
+        @media #{ $media_mobile } {
+            font-size: 30px;
+        }
+    }
+
+    & .text-heading {
+        row-gap: 16px;
+
+        & img {
+            width: 5%;
+            height: auto;
+            margin: auto;
+
+            @media #{ $media_mobile } {
+                width: 30%;
+            }
+        }
+
+        & p {
+            margin-top: 16px;
+            text-align: justify;
+            text-align-last: center;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: -0.02em;
+
+        }
+
+        & p:last-of-type {
+            margin-bottom: 100px;
+        }
+
+    }
+
+    & .map {
+        height: auto;
+
+        & img {
+            width: 100%;
+            height: auto;
+
+            @media #{ $media_mobile } {
+                height: 200px;
+            }
+
+        }
+    }
+
+    & .text-heading-2 {
+
+        & h4 {
+            margin-top: 100px;
+        }
+
+        & #small-diamond {
+            width: 5%;
+            height: auto;
+            margin: 16px auto 32px auto;
+
+            @media #{ $media_mobile } {
+                width: 30%;
+            }
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: 14px;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        & .gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &>* {
+                height: auto;
+                width: calc(100% / 3);
+            }
+
+            @media #{ $media_tablet } {
+                width: 100%;
+            }
+
+            @media #{ $media_mobile } {
+                flex-direction: column;
+
+                &>* {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media #{ $media_mobile } {
+        background-size: contain;
+    }
+
+}
+
+footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+
+    & img {
+        width: 10%;
+        height: auto;
+        margin: auto;
+    }
+
+    & .menu-container-footer {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        & ul {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            margin: 0;
+            column-gap: 22px;
+
+            @media #{ $media_mobile } {
+                flex-direction: column;
+                row-gap: 22px;
+            }
+        }
+
+        & li {
+            display: flex;
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.05em;
+
+            &.current_page_item {
+                font-weight: 700;
+            }
+
+        }
+
+        & a {
+            font-family: 'Poppins', serif;
+            text-transform: uppercase;
+
+            &:hover {
+                color: currentColor;
+                font-weight: 700;
+            }
+        }
+
+        @media #{ $media_tablet } {
+            width: 60%;
+        }
+    }
+
+    & p {
+        text-align: center;
+    }
+}
